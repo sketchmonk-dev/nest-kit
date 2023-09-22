@@ -5,6 +5,7 @@ import { HydraClientModule } from '@sketchmonk/nest-hydra';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { NovuModule } from '@sketchmonk/nest-novu';
+import { S3Module } from '@sketchmonk/nest-s3';
 
 @Module({
   imports: [
@@ -24,7 +25,22 @@ import { NovuModule } from '@sketchmonk/nest-novu';
           backendUrl: config.get('NOVU_BACKEND_URL', 'https://api.novu.co/v1'),
         }
       })
-    })
+    }),
+    S3Module.registerAsync({
+      imports: [ConfigModule.forRoot()],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => {
+          return {
+              s3: {
+                  region: config.get('AWS_S3_REGION'),
+                  credentials: {
+                      accessKeyId: config.get('AWS_S3_ACCESS_KEY_ID'),
+                      secretAccessKey: config.get('AWS_S3_SECRET_ACCESS_KEY'),
+                  }
+              }
+          }
+      }
+  }),
   ],
   controllers: [AppController],
   providers: [AppService],

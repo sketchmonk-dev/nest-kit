@@ -1,0 +1,26 @@
+{
+    "name": "@sketchmonk/nest-s3",
+    "version": "0.0.0",
+    "description": "S3 module for NestJS",
+    "keywords": [
+        "nestjs",
+        "s3",
+        "aws",
+        "storage"
+    ],
+    "private": false,
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "dev": "tsc -w",
+        "build": "tsc"
+    },
+    "peerDependencies": {
+        "@aws-sdk/client-s3": "^3.417.0",
+        "@nestjs/common": "^10.0.0"
+    },
+    "devDependencies": {
+        "@aws-sdk/client-s3": "^3.417.0",
+        "typescript": "^5.2.2"
+    }
+}

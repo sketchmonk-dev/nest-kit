@@ -3,9 +3,11 @@ import { INestApplication } from '@nestjs/common';
 import { HYDRA_CLIENT_TOKEN, HydraClient } from '@sketchmonk/nest-hydra';
 import { JwkApi, MetadataApi, OAuth2Api, OidcApi, WellknownApi } from '@ory/hydra-client';
 import { Novu } from '@novu/node';
+import { S3 } from '@aws-sdk/client-s3';
 
 import { AppModule } from './../src/app.module';
 import { NOVU_CLIENT_TOKEN } from '@sketchmonk/nest-novu';
+import { S3_CLIENT_TOKEN } from '@sketchmonk/nest-s3';
 
 describe('HydraModule', () => {
   let app: INestApplication;
@@ -83,6 +85,27 @@ describe('NovuModule', () => {
     const novu = app.get(NOVU_CLIENT_TOKEN);
     expect(novu).toBeDefined()
     expect(novu).toBeInstanceOf(Novu);
+  });
+
+})
+
+describe('S3Module', () => {
+  let app: INestApplication;
+
+  beforeEach(async () => {
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    app = moduleFixture.createNestApplication();
+    await app.init()
+  });
+
+  it('s3', () => {
+    // test for providers existence
+    const s3 = app.get(S3_CLIENT_TOKEN);
+    expect(s3).toBeDefined()
+    expect(s3).toBeInstanceOf(S3);
   });
 
 })

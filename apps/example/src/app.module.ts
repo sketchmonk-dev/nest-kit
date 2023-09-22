@@ -31,13 +31,11 @@ import { S3Module } from '@sketchmonk/nest-s3';
       inject: [ConfigService],
       useFactory: (config: ConfigService) => {
           return {
-              s3: {
-                  region: config.get('AWS_S3_REGION'),
-                  credentials: {
-                      accessKeyId: config.get('AWS_S3_ACCESS_KEY_ID'),
-                      secretAccessKey: config.get('AWS_S3_SECRET_ACCESS_KEY'),
-                  }
-              }
+            region: config.get('AWS_S3_REGION'),
+            credentials: {
+                accessKeyId: config.get('AWS_S3_ACCESS_KEY_ID'),
+                secretAccessKey: config.get('AWS_S3_SECRET_ACCESS_KEY'),
+            }
           }
       }
   }),

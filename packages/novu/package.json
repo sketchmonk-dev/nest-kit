@@ -1,14 +1,13 @@
 {
-    "name": "@sketchmonk/nest-hydra",
+    "name": "@sketchmonk/nest-novu",
     "version": "0.0.0",
     "private": false,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "keywords": [
         "nestjs",
-        "hydra",
-        "oauth2",
-        "openid"
+        "novu",
+        "notification"
     ],
     "scripts": {
         "dev": "tsc -w",
@@ -16,9 +15,10 @@
     },
     "peerDependencies": {
         "@nestjs/common": "^10.0.0",
-        "@ory/hydra-client": "2.2.0-rc.3"
+        "@novu/node": "0.19.0"
     },
     "devDependencies": {
         "typescript": "^5.2.2"
-    }
+    },
+    "dependencies": {}
 }

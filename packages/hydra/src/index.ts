@@ -7,5 +7,6 @@ export {
     InjectOidcClient,
     InjectWellKnownClient,
     // type
-    HydraClient
+    HydraClient,
+    HYDRA_CLIENT_TOKEN
 } from "./lib/hydra.providers";

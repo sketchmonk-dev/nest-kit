@@ -4,7 +4,10 @@
   "initialVersions": {
     "@sketchmonk/nest-hydra": "0.0.0",
     "@sketchmonk/nest-novu": "0.0.0",
-    "@sketchmonk/nest-s3": "0.0.0"
+    "@sketchmonk/nest-s3": "0.0.0",
+    "@sketchmonk/nest-winston": "0.0.0"
   },
-  "changesets": []
+  "changesets": [
+    "eight-wombats-swim"
+  ]
 }

@@ -8,6 +8,8 @@ import { S3 } from '@aws-sdk/client-s3';
 import { AppModule } from './../src/app.module';
 import { NOVU_CLIENT_TOKEN } from '@sketchmonk/nest-novu';
 import { S3_CLIENT_TOKEN } from '@sketchmonk/nest-s3';
+import { WINSTON_LOGGER_TOKEN } from '@sketchmonk/nest-winston';
+import { Logger } from 'winston';
 
 describe('HydraModule', () => {
   let app: INestApplication;
@@ -106,6 +108,27 @@ describe('S3Module', () => {
     const s3 = app.get(S3_CLIENT_TOKEN);
     expect(s3).toBeDefined()
     expect(s3).toBeInstanceOf(S3);
+  });
+
+})
+
+describe('WinstonModule', () => {
+  let app: INestApplication;
+
+  beforeEach(async () => {
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    app = moduleFixture.createNestApplication();
+    await app.init()
+  });
+
+  it('logger', () => {
+    // test for providers existence
+    const logger = app.get(WINSTON_LOGGER_TOKEN);
+    expect(logger).toBeDefined();
+    expect(logger).toBeInstanceOf(Logger);
   });
 
 })

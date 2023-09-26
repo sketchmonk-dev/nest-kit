@@ -29,9 +29,11 @@
     "@ory/hydra-client": "2.2.0-rc.3",
     "@novu/node": "0.19.0",
     "@aws-sdk/client-s3": "^3.417.0",
-    "@sketchmonk/nest-hydra": "*",
-    "@sketchmonk/nest-novu": "*",
-    "@sketchmonk/nest-s3": "*"
+    "winston": "3.10.0",
+    "@sketchmonk/nest-hydra": "0.0.1-canary.0",
+    "@sketchmonk/nest-novu": "0.0.1-canary.0",
+    "@sketchmonk/nest-s3": "0.0.1-canary.0",
+    "@sketchmonk/nest-winston": "workspace:*"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",

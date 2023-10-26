@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Global, Module } from '@nestjs/common';
 import { ConfigurableModuleClass } from './winston.options';
 import { WINSTON_LOGGER_TOKEN, loggerProvider } from './winston.providers';
 

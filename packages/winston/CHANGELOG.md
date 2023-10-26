@@ -1,5 +1,11 @@
 # @sketchmonk/nest-winston
 
+## 0.0.1-canary.2
+
+### Patch Changes
+
+- fixed issue with winston not able to use globally
+
 ## 0.0.1-canary.1
 
 ### Patch Changes

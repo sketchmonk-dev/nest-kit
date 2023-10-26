@@ -1,6 +1,6 @@
 {
     "name": "@sketchmonk/nest-winston",
-    "version": "0.0.1-canary.1",
+    "version": "0.0.1-canary.2",
     "private": false,
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

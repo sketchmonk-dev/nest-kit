@@ -8,10 +8,6 @@ export const s3ClientProvider: Provider = {
     inject: [S3_OPTIONS_TOKEN],
     provide: S3_CLIENT_TOKEN,
     useFactory: (options: S3ClientConfig) => {
-        return new S3(options).putObject({
-            Bucket: 'test',
-            Key: 'test',
-            Body: 'test',
-        });
+        return new S3(options);
     }
 }

@@ -1,5 +1,11 @@
 # @sketchmonk/nest-s3
 
+## 0.0.1-canary.2
+
+### Patch Changes
+
+- version bump
+
 ## 0.0.1-canary.1
 
 ### Patch Changes

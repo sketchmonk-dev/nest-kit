@@ -32,7 +32,7 @@
     "winston": "3.10.0",
     "@sketchmonk/nest-hydra": "0.0.1-canary.0",
     "@sketchmonk/nest-novu": "0.0.1-canary.0",
-    "@sketchmonk/nest-s3": "0.0.1-canary.1",
+    "@sketchmonk/nest-s3": "0.0.1-canary.2",
     "@sketchmonk/nest-winston": "workspace:*"
   },
   "devDependencies": {

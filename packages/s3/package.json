@@ -1,6 +1,6 @@
 {
     "name": "@sketchmonk/nest-s3",
-    "version": "0.0.1-canary.1",
+    "version": "0.0.1-canary.2",
     "description": "S3 module for NestJS",
     "keywords": [
         "nestjs",
